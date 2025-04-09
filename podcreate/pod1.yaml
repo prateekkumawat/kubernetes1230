@@ -27,4 +27,4 @@ spec:
   - name: firstpod-port
     port:  80
     targetPort:  80
-    NodePort: 30001  #nodeport 30,000-32767 only port
+    nodePort: 30001  #nodeport 30,000-32767 only port
