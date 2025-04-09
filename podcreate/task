@@ -1,0 +1,2 @@
+# Create a Nginx pod and Serve "Hello Nginx Kubernetes" Pages. create using yaml 
+# Create Apache service using pod that serve "Hello Pages HTTP" using yaml 
