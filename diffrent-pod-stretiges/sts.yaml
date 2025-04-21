@@ -18,7 +18,6 @@ spec:
         image: postgres:latest
         ports:
         - containerPort: 5432
-          name: pgsql-port
         env: 
         - name: POSTGRES_PASSWORD
           value: redhat1234565
@@ -33,6 +32,6 @@ spec:
     app: pgsql
   type: ClusterIP
   ports:
-  - name: Pgsql-port
+  - name: psql-port
     port: 5432
-    targetPort: 432
+    targetPort: 5432
