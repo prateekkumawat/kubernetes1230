@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: pgsql 
+spec:
+  selector:
+    matchLabels:
+      app: pgsql
+  serviceName: pgsql-svc
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: pgsql
+    spec:
+      containers:
+      - name: pgsql
+        image: postgres:latest
+        ports:
+        - containerPort: 5432
+          name: pgsql-port
+        env: 
+        - name: POSTGRES_PASSWORD
+          value: redhat1234565
+
+--- 
+kind: Service
+apiVersion: v1
+metadata:
+  name: pgsql-svc
+spec:
+  selector:
+    app: pgsql
+  type: ClusterIP
+  ports:
+  - name: Pgsql-port
+    port: 5432
+    targetPort: 432
