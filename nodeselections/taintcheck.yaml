@@ -14,5 +14,5 @@ spec:
         cpu: "500m"
     ports:
       - containerPort: 80
-    nodeSelector: 
-        nodepurpose: mgmt  
+  nodeSelector: 
+    nodepurpose: mgmt  
