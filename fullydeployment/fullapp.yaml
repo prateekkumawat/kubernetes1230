@@ -37,6 +37,7 @@ kind: Deployment
 metadata:
   name: fullapp
 spec:
+  replicas: 3 
   selector:
     matchLabels:
       app: fullapp
